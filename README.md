@@ -6,7 +6,7 @@
 
 这是一个多人OJ刷题打卡记录，每个人都有一个自己的刷题打卡文件夹
 
-> 想加入本仓库的可以fork后创建pull request。或在申请成为仓库成员哦！
+> 想加入本仓库的可以fork后创建pull request。或申请成为仓库成员哦！
 
 ### 模块
 
@@ -25,7 +25,8 @@
 如果当你上传代码的时候，发现了这个git错误👇，那是因为你的本地仓库落后于远程仓库的版本
 
 ~~~
-Updates were rejected because the remote contains work that you do not have locally. This is usually caused by another repository pushing to the same ref. You may want to first integrate the remote changes
+Updates were rejected because the remote contains work that you do not have locally. 
+This is usually caused by another repository pushing to the same ref. You may want to first integrate the remote changes
 ~~~
 
 需要你先执行`git pull`操作后，再进行`git push`操作
@@ -36,4 +37,5 @@ Updates were rejected because the remote contains work that you do not have loca
 
 ### 写在最后
 
-如果觉得这个项目不错的话，还请**star一下支持我们**！
+如果觉得这个项目不错的话，还请⭐**star一下支持我们**！
+
