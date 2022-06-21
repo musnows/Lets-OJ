@@ -37,9 +37,11 @@ You may want to first integrate the remote changes
 
 You need to do `git pull` before `git push`.
 
-###  2. ...
+###  2.About branch
 
-……
+In theory, a healthy team project needs to use multi branch operations. To avoid conflicts caused by different developers modifying a file in the same branch at the same time.
+
+But this repo doesn't need "cooperative development",we just use folders to archive  files of different members.
 
 
 ## In the end
