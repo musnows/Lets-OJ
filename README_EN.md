@@ -4,7 +4,10 @@
 <div align="center">
 
 English | [简体中文](./README.md)
-[![star](https://gitee.com/ewait/LetsOJ/badge/star.svg?theme=dark)](https://gitee.com/ewait/LetsOJ/stargazers)[![fork](https://gitee.com/ewait/LetsOJ/badge/fork.svg?theme=dark)](https://gitee.com/ewait/LetsOJ/members)[![GitHub Star](https://img.shields.io/github/stars/Aewait/Lets_OJ?logo=github)](https://github.com/Aewait/Lets_OJ)
+
+[![Gitee star](https://gitee.com/ewait/LetsOJ/badge/star.svg?theme=white)](https://gitee.com/ewait/LetsOJ/stargazers)
+![GitHub Star](https://img.shields.io/github/stars/Aewait/Lets_OJ?style=social)
+
 </div>
 
 This is a team code-learning Repositories
