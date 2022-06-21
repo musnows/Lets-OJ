@@ -22,18 +22,24 @@ This is a team code-learning Repositories
 * Include some notes.
 * The notes are written in Chinese. It doesn't matter if you don't understand them.
 
-Becasue we all use another git server from **Gitee**,you can check out Gitee url of this Repostiories: https://gitee.com/ewait/LetsOJ
+Becasue we mainly use another git platform **Gitee**,you can check out Gitee url of this Repostiories: https://gitee.com/ewait/LetsOJ
+
+> Most of the time, the repo on GitHub and Gitee are synchronized.
 
 ## Debug
-### 1.about git
-If you find this err while using `git push`,that's because the remote has been changed sence you last`git pull`.
+### 1.About git
+If you encounter this problem when  performing `git push`, it is because the remote repo has been modified since you last performed `git push`.
 ~~~
 Updates were rejected because the remote contains work that you do not have locally. 
 This is usually caused by another repository pushing to the same ref. 
 You may want to first integrate the remote changes
 ~~~
 
-You need to do `git pull` before `git push`
+You need to do `git pull` before `git push`.
+
+###  2. ...
+
+……
 
 
 ## In the end
