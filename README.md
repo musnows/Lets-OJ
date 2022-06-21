@@ -5,7 +5,11 @@
 
 <div align="center">
 [English](./README_EN.md) | 简体中文
-[![star](https://gitee.com/ewait/LetsOJ/badge/star.svg?theme=dark)](https://gitee.com/ewait/LetsOJ/stargazers)[![fork](https://gitee.com/ewait/LetsOJ/badge/fork.svg?theme=dark)](https://gitee.com/ewait/LetsOJ/members)[![GitHub Star](https://img.shields.io/github/stars/Aewait/Lets_OJ?logo=github)](https://github.com/Aewait/Lets_OJ)
+
+这是一个多人OJ刷题打卡项目
+
+[![star](https://gitee.com/ewait/LetsOJ/badge/star.svg?theme=dark)](https://gitee.com/ewait/LetsOJ/stargazers)
+[![GitHub Star](https://img.shields.io/github/stars/Aewait/Lets_OJ?logo=github)](https://github.com/Aewait/Lets_OJ)
 
 </div>
 
