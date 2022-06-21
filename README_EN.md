@@ -1,4 +1,12 @@
-# Lets_OJ
+<h1 align="center">Lets_OJ</h1>
+
+
+<div align="center">
+
+English | [简体中文](./README.md)
+[![star](https://gitee.com/ewait/LetsOJ/badge/star.svg?theme=dark)](https://gitee.com/ewait/LetsOJ/stargazers)[![fork](https://gitee.com/ewait/LetsOJ/badge/fork.svg?theme=dark)](https://gitee.com/ewait/LetsOJ/members)[![GitHub Star](https://img.shields.io/github/stars/Aewait/Lets_OJ?logo=github)](https://github.com/Aewait/Lets_OJ)
+</div>
+
 This is a team code-learning Repositories
 
 > Most of us are Chinese students,we create this Repositories to learn code (mostly c/c++) and practice online OJ together.   
@@ -15,7 +23,7 @@ Becasue we all use another git server from **Gitee**,you can check out Gitee url
 
 ## Debug
 ### 1.about git
-If you find this err while using `git push`,that's because you don't have some files in remote repos
+If you find this err while using `git push`,that's because the remote has been changed sence you last`git pull`.
 ~~~
 Updates were rejected because the remote contains work that you do not have locally. 
 This is usually caused by another repository pushing to the same ref. 
