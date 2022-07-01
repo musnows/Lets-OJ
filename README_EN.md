@@ -6,7 +6,7 @@
 English | [简体中文](./README.md)
 
 [![Gitee star](https://gitee.com/ewait/LetsOJ/badge/star.svg?theme=white)](https://gitee.com/ewait/LetsOJ/stargazers)
-![GitHub Star](https://img.shields.io/github/stars/Aewait/Lets_OJ?style=social)
+[![GitHub Star](https://img.shields.io/github/stars/Aewait/Lets_OJ?style=social)](https://github.com/Aewait/Lets_OJ)
 
 </div>
 
