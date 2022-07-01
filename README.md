@@ -21,9 +21,7 @@
 > 
 > 当然，也非常支持您选择Github平台加入打卡计划
 
-仓库地址：
-* [Gitee](https://gitee.com/ewait/LetsOJ)
-* [Gihub](https://github.com/Aewait/Lets_OJ)
+仓库地址：[Gitee](https://gitee.com/ewait/LetsOJ) | [Gihub](https://github.com/Aewait/Lets_OJ)
 
 > 想加入打卡计划的可以fork后创建pull request。或申请成为仓库成员哦！
 
