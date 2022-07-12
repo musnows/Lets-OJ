@@ -930,3 +930,161 @@
 //    return 0;
 //}
 
+
+
+
+//前面一部分题目对于现在的我来说太简单了
+//于是先把递归的题目给刷了
+
+//BC167 函数实现计算一个数的阶乘
+//#include<stdio.h>
+//long long factorial(int n) {
+//    if (n == 1) {
+//        return 1;
+//    }
+//    return n * factorial(n - 1);
+//}
+//
+//int main()
+//{
+//    int n;
+//    scanf("%d", &n);
+//    printf("%lld", factorial(n));
+//
+//    return 0;
+//}
+
+
+//BC168 牛牛的西格玛
+//#include <stdio.h>
+//long long func(int n) {
+//    if (n == 1) {
+//        return 1;
+//    }
+//    return n + func(n - 1);
+//}
+//
+//int main()
+//{
+//    int n;
+//    scanf("%d", &n);
+//    printf("%lld", func(n));
+//
+//    return 0;
+//}
+
+
+//#include <stdio.h>
+////BC169 牛牛的Ackmann
+// 具题解所说，本体有问题，递归次数太多，内存超限。就是题目给的限制和题目要求不匹配了
+//long long Ackmann(int n, int m) {
+//    if (m == 0) {
+//        return n + 1;
+//    }
+//    if (m > 0 && n == 0)
+//        return Ackmann(m - 1, 1);
+//    if (m > 0 && n > 0) {
+//        return Ackmann(m - 1, Ackmann(m, n - 1));
+//    }
+//
+//    return 0;
+//}
+//
+//int main()
+//{
+//    int n, m;
+//    scanf("%d %d", &n, &m);
+//    printf("%lld", Ackmann(n, m));
+//
+//    return 0;
+//}
+
+
+//BC170 牛牛的digit
+//#include<stdio.h>
+//#include<math.h>
+//int digit(x, i) {
+//    int sum = 0;
+//    for (int j = 0; j < i; j++) {
+//        int tmp = x % 10;
+//        x /= 10;
+//        sum += tmp * pow(10, j);
+//    }
+//    return sum;
+//}
+//
+//int main()
+//{
+//    int num, x;
+//    scanf("%d %d", &num, &x);
+//    printf("%d", digit(num, x));
+//
+//    return 0;
+//}
+
+
+////BC171 牛牛的Hermite多项式
+//#include <stdio.h>
+//int Hermite(int n, int x) {
+//    if (n == 0) {
+//        return 1;
+//    }
+//    if (n == 1) {
+//        return 2 * n;
+//    }
+//    if (n > 1) {
+//        return (2 * x * Hermite(n - 1, x) - 2 * (n - 1) * Hermite(n - 2, x));
+//    }
+//    return 0;
+//}
+//
+//int main()
+//{
+//    int n, x;
+//    scanf("%d %d", &n, &x);
+//    printf("%d", Hermite(n, x));
+//    return 0;
+//}
+
+//#include<stdio.h>
+////BC172 牛牛的排列数
+//long long factorial(int n, int m) {
+//    static int tmp = n - m + 1;
+//    if (n == tmp) {
+//        return n;
+//    }
+//    return n * factorial(n - 1, m);
+//}
+//
+//
+//int main()
+//{
+//    int n, x;
+//    scanf("%d %d", &n, &x);
+//    printf("%lld", factorial(n, x));
+//    return 0;
+//}
+
+//#include<stdio.h>
+////BC173 牛牛逆序输出
+//void Print(int n)
+//{
+//    if (n > 9) {
+//        printf("%d", n % 10);
+//    }
+//
+//    if (n < 10) {
+//        printf("%d", n);
+//        return;
+//    }
+//    Print(n / 10);
+//}
+//
+//int main()
+//{
+//    int num;
+//    scanf("%d", &num);
+//    Print(num);
+//
+//    return 0;
+//}
