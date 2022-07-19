@@ -1,5 +1,5 @@
 //https://leetcode.cn/problems/check-permutation-lcci/submissions/
-//é¢è¯•é¢˜ 01.02. åˆ¤å®šæ˜¯å¦äº’ä¸ºå­—ç¬¦é‡æ’
+//ÃæÊÔÌâ 01.02. ÅĞ¶¨ÊÇ·ñ»¥Îª×Ö·ûÖØÅÅ
 class Solution {
 public:
     bool CheckPermutation(string s1, string s2) {
@@ -9,4 +9,28 @@ public:
      sort(s2.begin(),s2.end());
       return s1==s2;
     }
+};\
+//¹şÏ£ 
+//ÓÉÓÚ×Ö·û´®Ö»°üº¬ 2626 ¸öĞ¡Ğ´×ÖÄ¸£¬Òò´ËÎÒÃÇ¿ÉÒÔÎ¬»¤Ò»¸ö³¤¶ÈÎª 2626 µÄÆµ´ÎÊı×é \textit{table}table£¬
+//ÏÈ±éÀú¼ÇÂ¼×Ö·û´® s 1ÖĞ×Ö·û³öÏÖµÄÆµ´Î£¬È»ºó±éÀú×Ö·û´® s_2s 
+//¼õÈ¥ able ÖĞ¶ÔÓ¦µÄÆµ´Î£¬Èç¹û³öÏÖ table[i]<0ÔòËµÃ÷ s 2°üº¬Ò»¸ö²»ÔÚ s1ÖĞµÄ¶îÍâ×Ö·û£¬·µ»Ø false ¼´¿É
+class Solution {
+public:
+    bool CheckPermutation(string s1, string s2) {
+        if (s1.length() != s2.length()) {
+            return false;
+        }
+        vector<int> table(26, 0);
+        for (auto& ch: s1) {
+            table[ch - 'a']++;
+        }
+        for (auto& ch: s2) {
+            table[ch - 'a']--;
+            if (table[ch - 'a'] < 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 };
+
