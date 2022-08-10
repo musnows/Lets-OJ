@@ -97,7 +97,7 @@ async def oj_hander(msg:Message,*arg):
         global  OjDict
         OjDict['user']=msg.author_id
         OjDict['name']=msg.author.nickname
-        OjDict['day']=0
+        OjDict['day']= 1
         OjDict['date']= GetDate()
         OjDict['oj']=arg
 
@@ -126,7 +126,7 @@ async def oj_hander(msg:Message,*arg):
             await msg.reply(f"打卡成功！这是你打卡的第{s['day']}天")
         else:
             data.append(OjDict)
-            await msg.reply(f"首天打卡成功！这是你打卡的第01天")
+            await msg.reply(f"首天打卡成功！这是你打卡的第1天")
 
         #不管是否已存在，都需要重新执行写入（更新/添加）
         with open("./log/oj.json",'w',encoding='utf-8') as fw1:
