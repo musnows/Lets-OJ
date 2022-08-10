@@ -62,7 +62,7 @@ async def help(msg:Message):
 OjDict = {
     'user': '', 
     'name':'',
-    'day': '', 
+    'day': 0, 
     'date':'',
     'oj':[]
 }
@@ -70,24 +70,34 @@ OjDict = {
 def GetDate(): #将获取当前日期成函数方便使用
     return time.strftime("%y-%m-%d", time.localtime())
 
+
+# 查看已经打卡了多少道题目
+@bot.command(name='ojck')
+async def oj_check(msg:Message):
+    logging(msg)
+    with open("./log/oj.json",'r',encoding='utf-8') as fr1:
+            data = json.load(fr1)
+    for s in data:
+        if s['user']==msg.author_id:
+            num=len(s['oj']) #list长度
+            await msg.reply(f"您已经打卡了{s['day']}天，共{num}道题目，继续加油!\n")
+            return
+
 # 打卡
 @bot.command(name='打卡',aliases=['OJ'])
 #async def oj_hander(msg:Message,today:str ='err',oj_name:str='err',trash:str='err'): #这里故意添加第4个参数，以防打错 
-async def oj_hander(msg:Message,today:str ='err',*arg):
+async def oj_hander(msg:Message,*arg):
     logging(msg)
     #print(arg)
-    if today == 'err' or arg==():
-        await msg.reply(f"打卡参数错误！day: `{today}` oj:`{arg}`")
+    if arg==():
+        await msg.reply(f"打卡参数错误！oj题目:`{arg}`")
         return
-    elif len(today)!=2:
-        await msg.reply(f"打卡天数错误！day: `{today}`\n打卡天数仅支持两位数，如: 01,23")
-        return
-
+        
     try:
         global  OjDict
         OjDict['user']=msg.author_id
         OjDict['name']=msg.author.nickname
-        OjDict['day']=today
+        OjDict['day']=0
         OjDict['date']= GetDate()
         OjDict['oj']=arg
 
@@ -97,20 +107,23 @@ async def oj_hander(msg:Message,today:str ='err',*arg):
         for s in data:
             if s['user'] == msg.author_id:
                 date = GetDate()
-                # 支持正常追加当天打卡天数
-                if s['date'] == date and today == s['day']:
-                    s['day'] = today
-                    s['date'] = date
+                if s['date'] == date:# 支持正常追加当天打卡题目
                     for i in arg:
                         s['oj'].append(i) #如果该用户之前已经打过卡，则在后面追加内容
-                    flag =1
+                    flag = 1
                     break
-                elif s['date'] == date and today != s['day']:
-                    await msg.reply(f"今天是你打卡的第{s['day']}天，你已经打过卡辣！可以用`/打卡 {s['day']} 题号`来追加当日打卡题目，但不可以改变打卡天数哦~")
-                    return
+                elif s['date'] != date:
+                    s['day'] +=1 # 天数加一
+                    s['date'] = date #修改日期
+                    for i in arg:
+                        s['oj'].append(i) #在后面追加内容
+                    flag = 2
+                    break
 
         if flag ==1:
-            await msg.reply(f"打卡成功！这是你打卡的第{today}天")
+            await msg.reply(f"添加打卡题目成功！这是你打卡的第{s['day']}天")
+        elif flag ==2:
+            await msg.reply(f"打卡成功！这是你打卡的第{s['day']}天")
         else:
             data.append(OjDict)
             await msg.reply(f"首天打卡成功！这是你打卡的第01天")
