@@ -27,7 +27,7 @@ public:
         {
             p->next=q->next;
             ListNode *del=p->next;
-            while(del!=q->next)
+            while(del!=p->next)
             {
                 ListNode *tmp = del;
                   del = del->next; 
