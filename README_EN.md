@@ -18,9 +18,8 @@ This is a team code-learning Repositories
 
 ## Content
 
-* OJ form `leetcode.cn` and `www.nowcoder.com`.
-* Include some notes.
-* The notes are written in Chinese. It doesn't matter if you don't understand them.
+* OJ form `leetcode.cn` and `www.nowcoder.com`
+* Include some notes(written in Chinese)
 
 Becasue we mainly use another git platform **Gitee**,you can check out Gitee url of this Repostiories: https://gitee.com/ewait/LetsOJ
 
