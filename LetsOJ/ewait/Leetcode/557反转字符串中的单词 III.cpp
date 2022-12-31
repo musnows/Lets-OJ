@@ -34,3 +34,40 @@ public
         return s;
     }
 };
+
+
+//22.12.31第二次写这道题
+//不同的解决方案
+class Solution {
+public:
+    void ReverString(vector<char>& tmp,string& ret)
+    {
+        auto rit = tmp.rbegin();
+        while(rit!=tmp.rend())
+        {
+            //cout << (*rit);
+            ret+=(*rit);
+            rit++;
+        }
+        tmp.resize(0);//清空vector
+    }
+
+    string reverseWords(string s) {
+        vector<char> tmp;
+        string ret="";
+        for(int i=0;i<s.size();i++)
+        {
+            if(s[i]!=' ')
+            {
+                tmp.push_back(s[i]);
+            }
+            else
+            {//遇到空格，就逆序添加vector中以有内容
+                ReverString(tmp,ret);
+                ret+=" ";//添加空格
+            }
+        }
+        ReverString(tmp,ret);//最后一个单词
+        return ret;
+    }
+};
