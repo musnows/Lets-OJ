@@ -24,3 +24,29 @@ public:
     }
 };
 //https://leetcode.cn/problems/valid-anagram/description/
+
+//上面这个办法的空间复杂度更高（虽然都是O1)
+//用下面的办法，第一个遍历++。第二次遍历--，节省了一个vector的空间
+//时间复杂度是O(s.size()+t.size()+26),相当于O(2N),即O(N)
+class Solution {
+public:
+    bool isAnagram(string s, string t) {
+        vector<int> nums(26,0);
+        for(auto&c:s)
+        {
+            nums[c-'a']++;
+        }
+        for(auto&c:t)
+        {
+            nums[c-'a']--;
+        }
+        for(auto&n:nums)
+        {
+            if(n!=0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+};
