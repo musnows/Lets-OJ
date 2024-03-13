@@ -1,2 +1,4 @@
-config.json
-bot/log
+# vscode
+.vs/
+.vscode/
+.idea/
